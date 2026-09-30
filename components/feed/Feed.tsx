@@ -73,7 +73,7 @@ export default function Feed() {
               description={
                 article.description || "No description available."
               }
-              category={article.source}
+              category={article.category}
               image={
                 article.image ||
                 "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=80"
