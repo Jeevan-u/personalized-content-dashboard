@@ -107,7 +107,10 @@ export default function Feed({ searchQuery, mode = "personalized" }: FeedProps) 
             {articles.map((article) => (
               <ContentCard
                 key={article.url}
-                {...article}
+                id={article.url}
+                title={article.title}
+                description={article.description || "No description available."}
+                category={article.category}
                 image={article.image || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=80"}
                 draggable
                 onDragStart={() => { draggingId.current = article.url; }}
